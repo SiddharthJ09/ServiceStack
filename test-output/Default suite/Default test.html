@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Mar 20 01:40:23 IST 2019</td>
+<td>Started on:</td><td>Fri Mar 22 23:14:16 IST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (547 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (44 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,11 +75,14 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.servicenow.utils.ReadExcelData.getData()'><b>getData</b><br>Test class: com.servicenow.utils.ReadExcelData</td>
+<td title='com.servicenow.test.SN_MainTest.sn_IncidentTest()'><b>sn_IncidentTest</b><br>Test class: com.servicenow.test.SN_MainTest</td>
 <td><div><pre>org.testng.TestNGException: 
-Data Provider public java.util.Map com.servicenow.utils.ReadExcelData.credentials() throws com.codoid.products.exception.FilloException must return either Object[][] or Object[] or Iterator&lt;Object[]&gt; or Iterator&lt;Object&gt;, not interface java.util.Map
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:156)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+Parameter &apos;Username&apos; is required by @Test on method sn_IncidentTest but has not been marked @Optional or defined
+in C:\Users\hp-pc\AppData\Local\Temp\testng-eclipse--1024409799\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
 	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
@@ -100,11 +103,14 @@ Data Provider public java.util.Map com.servicenow.utils.ReadExcelData.credential
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1002021887", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1002021887'><pre>org.testng.TestNGException: 
-Data Provider public java.util.Map com.servicenow.utils.ReadExcelData.credentials() throws com.codoid.products.exception.FilloException must return either Object[][] or Object[] or Iterator&lt;Object[]&gt; or Iterator&lt;Object&gt;, not interface java.util.Map
-	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:156)
-	at org.testng.internal.Parameters.handleParameters(Parameters.java:706)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1143371233", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1143371233'><pre>org.testng.TestNGException: 
+Parameter &apos;Username&apos; is required by @Test on method sn_IncidentTest but has not been marked @Optional or defined
+in C:\Users\hp-pc\AppData\Local\Temp\testng-eclipse--1024409799\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParams(Parameters.java:290)
+	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:620)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
 	at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
 	at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:923)
@@ -127,7 +133,7 @@ Data Provider public java.util.Map com.servicenow.utils.ReadExcelData.credential
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.servicenow.utils.ReadExcelData@28d25987</td></tr>
+<td>com.servicenow.test.SN_MainTest@73d4cc9e</td></tr>
 </table><p>
 </body>
 </html>

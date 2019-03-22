@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <parameter name="Username" value="rohit.khot"/>
+    <parameter name="Password" value="test"/>
+    <parameter name="Browser" value="chrome"/>
     <classes>
-      <class name="com.servicenow.utils.ReadExcelData">
+      <class name="com.servicenow.test.SN_MainTest">
         <methods>
-          <include name="getData"/>
+          <include name="beforeMethod"/>
+          <include name="sn_IncidentTest" invocation-numbers="0"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.servicenow.utils.ReadExcelData -->
+      </class> <!-- com.servicenow.test.SN_MainTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -21,6 +21,9 @@ public class NavigationPanelPage extends BasePage {
 	 @FindBy(xpath="//li[@id='concourse_module_14641d70c611228501114133b3cc88a1']")
 	  public  WebElement linkCreateNew;
 	 
+	
+	 @FindBy(xpath="//li[@id='concourse_module_b55b4ab0c0a80009007a9c0f03fb4da9']")
+	  public  WebElement linkAll;
 	 
 	 
 	 public void waitForPageToLoad(){

@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.servicenow.utils.ReadExcelData">
+      <class name="com.servicenow.test.SN_MainTest">
         <methods>
-          <include name="getData"/>
+          <include name="beforeMethod"/>
+          <include name="sn_IncidentTest"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.servicenow.utils.ReadExcelData -->
+      </class> <!-- com.servicenow.test.SN_MainTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

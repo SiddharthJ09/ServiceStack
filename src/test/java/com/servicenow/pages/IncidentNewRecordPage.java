@@ -13,7 +13,7 @@ public class IncidentNewRecordPage extends BasePage {
 		
 	}
 	
-	 @FindBy(xpath="//input[@id='incident.number']")
+	 @FindBy(xpath="//input[@id='sys_original.incident.number']")
 	  public  WebElement txtboxIncidentNumber;
 	 
 	 @FindBy(xpath="//input[@id='sys_display.incident.caller_id']")
@@ -22,7 +22,7 @@ public class IncidentNewRecordPage extends BasePage {
 	 @FindBy(xpath="//select[@id='incident.category']")
 	  public  WebElement listCategory;
 	 
-	 @FindBy(xpath="//select[@id='incident.subcategory]")
+	 @FindBy(xpath="//select[@id='incident.subcategory']")
 	  public  WebElement listSubCategory;
 	 
 	 @FindBy(xpath="//input[@id='sys_display.incident.business_service']")
@@ -54,6 +54,17 @@ public class IncidentNewRecordPage extends BasePage {
 	 
 	 @FindBy(xpath="//button[@id='sysverb_insert_bottom']")
 	  public  WebElement btnSubmit;
+	 	
+	 @FindBy(xpath="//iframe[@id='gsft_main']")
+	  public  WebElement frameNewIncidentForm;
+	 
+	 @FindBy(xpath="//span[contains(@id,'hide_search')]//input")
+	  public  WebElement txtboxSearchName;
+	 
+	 @FindBy(xpath="//table[@id='sys_user_table']")
+	  public  WebElement tblUsers;
+	 
+	
 
 	 
 	 public void waitForPageToLoad(){
