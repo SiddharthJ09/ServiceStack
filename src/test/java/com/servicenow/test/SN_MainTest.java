@@ -29,7 +29,8 @@ public class SN_MainTest extends TestBase{
 	@Test
 	@Parameters({ "Username", "Password" })
 	public void sn_IncidentTest(String username,String password) throws InterruptedException, FilloException, IOException{
-				
+		
+		boolean iflag = false; 
 		Reader objDataDictionary = new Reader();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		
@@ -73,8 +74,10 @@ public class SN_MainTest extends TestBase{
 	            Thread.sleep(1000);
 	            System.out.println("Title of the new window: " +driver.getTitle());
 	             
+	            
+	            String [] arrCaller = objDataDictionary.getData("Caller").split(" "); 
 	            wait.until(ExpectedConditions.visibilityOf(incidentNewRecordPage.txtboxSearchName));
-	        	UtilityHelper.setText(incidentNewRecordPage.txtboxSearchName, objDataDictionary.getData("Caller"));
+	        	UtilityHelper.setText(incidentNewRecordPage.txtboxSearchName, arrCaller[0].trim());
 	        	Thread.sleep(2000);
 	        	incidentNewRecordPage.txtboxSearchName.sendKeys(Keys.ENTER);
 	        	Thread.sleep(2000);
@@ -89,13 +92,21 @@ public class SN_MainTest extends TestBase{
 	        			driver.switchTo().window(parentWindow);
 	        			break;
 	        		}else {
-	        			GenerateReport().fail("Caller "+objDataDictionary.getData("Caller")+" not Found.",
-	        				MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
+	        			
+	        			iflag = true;
+	        			
 	        		 
 	        		}
 	        	}
 	        
             }
+			
+			if(iflag) {
+				GenerateReport().fail("Caller "+objDataDictionary.getData("Caller")+" not Found.",
+        				MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
+			}
+			
+			
         }
 	
 		driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='gsft_main']")));

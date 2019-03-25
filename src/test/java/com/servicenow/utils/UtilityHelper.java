@@ -60,7 +60,7 @@ public class UtilityHelper extends BasePage {
 
 	}
 
-	public static void selectOptionFromList(WebElement webElement, String value) {
+	public static void selectOptionFromList(WebElement webElement, String value) throws IOException {
 
 		try {
 			Thread.sleep(700);
@@ -71,7 +71,7 @@ public class UtilityHelper extends BasePage {
 				// ReportStep().pass("Input set as :"+value,
 				// MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
 				ReportStep().log(Status.PASS,"Value Selected from dropdown:"+value);
-				;
+				
 			} else {
 				ReportStep().fail("Could Not find "+value+" option from dropdown ",
 						MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
@@ -79,7 +79,8 @@ public class UtilityHelper extends BasePage {
 			Thread.sleep(700);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			ReportStep().fail("Could Not find "+value+" option from dropdown or Object",
+					MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
 		}
 
 	}
@@ -99,7 +100,7 @@ public class UtilityHelper extends BasePage {
 			Thread.sleep(700);
 		} catch (Exception e) {
 
-			ReportStep().fail("Exception Occured:" + e,
+			ReportStep().fail("Could not find value "+value+" or Object",
 					MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
 		}
 
