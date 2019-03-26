@@ -21,6 +21,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.codoid.products.exception.FilloException;
+import com.servicenow.utils.Property;
 import com.servicenow.utils.Reader;
 
 public class TestBase extends Reader {
@@ -54,11 +55,10 @@ public class TestBase extends Reader {
 		driver.manage().window().maximize();
 		System.out.println(browser+" Browser Launched.");
 		System.out.println("Loading URL...");
-		driver.get("https://dev53617.service-now.com/login.do");
+		driver.get (Property.get("URL")); //(objDic.getData("URL"));
+//		driver.get("https://dev53617.service-now.com/login.do");
 		GenerateReport().log(Status.INFO,browser+" Browser Launched.");
-		
 	
-
 	}
 
 	@AfterMethod
