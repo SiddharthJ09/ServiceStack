@@ -44,6 +44,7 @@ public class SN_MainTest extends TestBase{
 		String actualTitle = driver.getTitle();
 		String expectedTitle = "My Homepage 1 | ServiceNow";
 		UtilityHelper.verifyTitle(actualTitle, expectedTitle);
+		
 		nPage.txtboxFilterNavigator.sendKeys("Incident");
 		UtilityHelper.waitForElement(nPage.linkCreateNew);
 		nPage.linkCreateNew.click();

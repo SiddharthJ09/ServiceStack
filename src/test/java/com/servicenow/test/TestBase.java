@@ -55,7 +55,8 @@ public class TestBase extends Reader {
 		driver.manage().window().maximize();
 		System.out.println(browser+" Browser Launched.");
 		System.out.println("Loading URL...");
-		driver.get (Property.get("URL")); //(objDic.getData("URL"));
+//		driver.get (Property.get("URL")); //(objDic.getData("URL"));
+		driver.get (Property.get("OHRM_URL")); //(objDic.getData("URL"));
 //		driver.get("https://dev53617.service-now.com/login.do");
 		GenerateReport().log(Status.INFO,browser+" Browser Launched.");
 	
@@ -74,6 +75,7 @@ public class TestBase extends Reader {
 		Date date = new Date();
 		String strDataTime = formatter.format(date).toString();
 		String FileName = "ScreenShot" + ((strDataTime.replaceAll(" ", "")).replaceAll("/", "")).replaceAll(":", "");
+		
 		strScreenshotpath = System.getProperty("user.dir") + "\\test-output\\Screenshot\\" + FileName + ".png";
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File(strScreenshotpath));

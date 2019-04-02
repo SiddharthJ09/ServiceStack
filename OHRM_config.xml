@@ -3,13 +3,9 @@
 <suite name="Suite" parallel="false">
 
 	<test name="Test">
-
-		<parameter name="Username" value="rohit.khot" />
-		<parameter name="Password" value="test" />
 		<parameter name="Browser" value="chrome" />
-		
 		<classes>
-			<class name="com.servicenow.test.SN_MainTest" />
+			<class name="com.servicenow.test.OHRM_AddEmployee" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
