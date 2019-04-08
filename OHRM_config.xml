@@ -5,7 +5,8 @@
 	<test name="Test">
 		<parameter name="Browser" value="chrome" />
 		<classes>
-			<class name="com.servicenow.test.OHRM_AddEmployee" />
+			<class name="com.servicenow.test.TC001_OHRM_AddEmployee" />
+			<class name="com.servicenow.test.TC002_OHRM_VerifyMenuOptions" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

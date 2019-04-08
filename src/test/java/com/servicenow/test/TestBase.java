@@ -36,7 +36,9 @@ public class TestBase extends Reader {
 	 @Parameters({"Browser"})
  	public void beforeMethod(String browser) throws IOException, FilloException {
 		Reader objDic = new Reader();
-		logger = extent.createTest(objDic.getData("TestCaseName"));
+//		logger = extent.createTest(objDic.getData("TestCaseName"));
+		logger = extent.createTest("TC002_OHRM_VerifyMenuOptions");
+		
 		System.out.println("Launching "+browser+"......");
 		if(browser.equalsIgnoreCase("chrome")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +"\\resources\\chromedriver.exe");
@@ -51,7 +53,7 @@ public class TestBase extends Reader {
 			driver = new FirefoxDriver();
 			
 		}
-		System.out.println();
+		System.out.println();                      
 		driver.manage().window().maximize();
 		System.out.println(browser+" Browser Launched.");
 		System.out.println("Loading URL...");

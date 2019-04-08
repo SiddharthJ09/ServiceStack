@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 2, 2019 07:53:37 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 8, 2019 08:05:04 PM</span>
 				</a>
 			</li>
 			<li>
@@ -138,10 +138,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='33.333%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='84.615%'><span class='strong'>11</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='7.692%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='7.692%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -156,17 +156,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
-						<span class='test-name'>SN_001_CreateNewIncident</span>
-						<span class='test-time'>Apr 2, 2019 07:53:37 PM</span>
+						<span class='test-name'>TC002_OHRM_VerifyMenuOptions</span>
+						<span class='test-time'>Apr 8, 2019 08:05:38 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 2, 2019 07:53:37 PM</span>
-	<span class='label end-time'>Apr 2, 2019 07:54:18 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 40s+690ms</span>
+	<span class='label start-time'>Apr 8, 2019 08:05:38 PM</span>
+	<span class='label end-time'>Apr 8, 2019 08:06:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+362ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -180,28 +180,68 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>7:53:45 PM</td>
+					<td class='timestamp'>8:05:45 PM</td>
 					<td class='step-details'>chrome Browser Launched.</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>7:53:54 PM</td>
-					<td class='step-details'>Clicked on Element Welcome Admin</td>
+					<td class='timestamp'>8:05:46 PM</td>
+					<td class='step-details'>Input value set as:Admin</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:48 PM</td>
+					<td class='step-details'>Input value set as:admin123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:53 PM</td>
+					<td class='step-details'>Clicked on button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:54 PM</td>
+					<td class='step-details'>Logged in Successfully.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:54 PM</td>
+					<td class='step-details'>Menu Option Leave available.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:55 PM</td>
+					<td class='step-details'>Menu Option Time available.</td>
 				</tr>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>7:54:18 PM</td>
-					<td class='step-details'>Exception Occured:org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='Logout']"}
-  (Session info: chrome=73.0.3683.86)
-  (Driver info: chromedriver=2.42.591088 (7b2b2dca23cca0862f674758c9a3933e685c27d5),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'SYNPUNDTC302225', ip: '172.20.203.79', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_171'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.42.591088 (7b2b2dca23cca0..., userDataDir: C:\Users\SIDDHA~1.JAD\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:54566}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: 5f96dce074f4e96f9f4431858e3e321a
-*** Element info: {Using=xpath, value=//a[text()='Logout']}<img data-featherlight='D:\ServiceNowLatest\2th April\ServiceStack\test-output\Screenshot\ScreenShot02042019195417.png' width='10%' src='D:\ServiceNowLatest\2th April\ServiceStack\test-output\Screenshot\ScreenShot02042019195417.png' data-src='D:\ServiceNowLatest\2th April\ServiceStack\test-output\Screenshot\ScreenShot02042019195417.png'></td>
+					<td class='timestamp'>8:05:55 PM</td>
+					<td class='step-details'>Menu Option My Info not available.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:55 PM</td>
+					<td class='step-details'>Menu Option Performance available.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:56 PM</td>
+					<td class='step-details'>Menu Option Directory available.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:56 PM</td>
+					<td class='step-details'>Clicked on button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:05:59 PM</td>
+					<td class='step-details'>Clicked on button.</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>8:06:00 PM</td>
+					<td class='step-details'>Logged Out Successfully.</td>
 				</tr>
 			</tbody>
 		</table>
@@ -249,25 +289,25 @@ Session ID: 5f96dce074f4e96f9f4431858e3e321a
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>3</div>
+					<div class='panel-lead'>13</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 2, 2019 07:53:37 PM</div>
+					<div class='panel-lead'>Apr 8, 2019 08:05:04 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 2, 2019 07:54:18 PM</div>
+			 		<div class='panel-lead'>Apr 8, 2019 08:06:00 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 41s+254ms</div>
+					<div class='panel-lead'>0h 0m 55s+899ms</div>
 				</div>
 			</div>
 		</div>
@@ -288,7 +328,7 @@ Session ID: 5f96dce074f4e96f9f4431858e3e321a
 				skipParent: 0,
 				exceptionsParent: 1,
 				
-				passChild: 1,
+				passChild: 11,
 				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,

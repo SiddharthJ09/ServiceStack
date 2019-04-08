@@ -108,11 +108,10 @@ public class UtilityHelper extends BasePage {
 
 	public static  void Click(WebElement webElement,String value) throws IOException {
 		
-		try {
-		
+		try {		
 			if(webElement.isDisplayed()) {
 				webElement.click();
-				ReportStep().log(Status.PASS,"Clicked on Element "+webElement.getText());
+				ReportStep().log(Status.PASS,"Clicked on button.");
 			}else{
 				ReportStep().fail(webElement.getText()+" Element not displayed.", MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
 			}
@@ -123,7 +122,6 @@ public class UtilityHelper extends BasePage {
 			}
 		
 	}
-
 	@Override
 	public void waitForPageToLoad() {
 

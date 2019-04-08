@@ -2,13 +2,13 @@ package com.servicenow.pages;
 
 import java.io.IOException;
 
-import javax.swing.text.Utilities;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
+import com.servicenow.test.TestBase;
 import com.servicenow.utils.UtilityHelper;
 
 public class OHRM_LoginPage extends BasePage {
@@ -33,28 +33,46 @@ public class OHRM_LoginPage extends BasePage {
 	@FindBy(xpath="//a[text()='Logout']")
 	  public static WebElement lnkLogout;
 	
+	@FindBy(xpath="//span[@id='spanMessage']")
+	  public static WebElement lblErrorMessage;
+	
+	@FindBy(xpath="//div[@id='divLogo']/img")
+	  public static WebElement imgOrangeHRMIcon;
+	
+	
+	
+	
+	
 	
 	
 	public void OHRM_Login() throws IOException {
 		
 		try {
-//			UtilityHelper.setText(txtUsername, "Admin");
-//			UtilityHelper.setText(txtPassword, "admin123")
-//			UtilityHelper.Click(btnLogin, "Login Button");
 			
-			txtUsername.sendKeys("Admin");
-			txtPassword.sendKeys("admin123");
-			btnLogin.click();
-						
+			UtilityHelper.setText(txtUsername, "Admin");
+			UtilityHelper.setText(txtPassword, "admin123");
+			UtilityHelper.Click(btnLogin, "Login Button");
+								
+			if( lnkWelcomeAdmin.isDisplayed()) {
+				System.out.println("Logged in Successfully.");
+				ReportStep().log(Status.PASS, "Logged in Successfully.");
+				
+			}else {
+				System.out.println("Failed to Login.");
+				String errorTxt = lblErrorMessage.getText();
+				ReportStep().fail("Failed to Login. "+errorTxt,
+						MediaEntityBuilder.createScreenCaptureFromPath(TestBase.strScreenshotpath).build());
+			}
+							
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			ReportStep().log(Status.FAIL, "Exception Occured");
+			ReportStep().log(Status.FAIL, "Failed to Login. Exception Occured");
 		}
 		
 	}
 	
 	
-	public static void OHRM_Logout() {
+	public static void OHRM_Logout() throws IOException {
 		
 		try {
 			
@@ -62,9 +80,15 @@ public class OHRM_LoginPage extends BasePage {
 			Thread.sleep(2000);
 			UtilityHelper.Click(lnkLogout, "Click on Logout");
 			
+			if(imgOrangeHRMIcon.isDisplayed()) {
+				ReportStep().log(Status.PASS, "Logged Out Successfully.");
+			}else {
+				ReportStep().log(Status.FAIL, "Signing Off was Unsuccessful.");
+			}
+			
 		}
 		catch(Exception e) {
-			
+			ReportStep().log(Status.FAIL, "Exception occured while Signing off.");
 		}
 		
 	}

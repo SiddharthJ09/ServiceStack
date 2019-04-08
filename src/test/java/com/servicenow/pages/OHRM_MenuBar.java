@@ -22,6 +22,8 @@ public class OHRM_MenuBar extends BasePage {
 	 @FindBy(xpath="//input[@id='btnAdd']")
 	  public  WebElement btnAdd;
 	
+	 @FindBy(xpath="//div[@class ='menu']//b")
+	 public WebElement lblMenuOptions;
 	
 	
 

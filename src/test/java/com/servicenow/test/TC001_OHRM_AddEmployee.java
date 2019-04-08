@@ -3,14 +3,15 @@ package com.servicenow.test;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.Status;
 import com.servicenow.pages.OHRM_AddEmployeePage;
 import com.servicenow.pages.OHRM_LoginPage;
 import com.servicenow.pages.OHRM_MenuBar;
+import com.servicenow.utils.UtilityHelper;
 
-public class OHRM_AddEmployee extends TestBase{
+public class TC001_OHRM_AddEmployee extends TestBase{
 	
 
 	@Test
@@ -30,20 +31,25 @@ public class OHRM_AddEmployee extends TestBase{
 			menu.btnAdd.click();
 			
 			OHRM_AddEmployeePage addEmployee = new OHRM_AddEmployeePage(driver);
-			addEmployee.txtFirstName.sendKeys("Siddharth");
-			addEmployee.txtLastName.sendKeys("Jadhav");
-			addEmployee.btnSave.click();
-					
 			
+			UtilityHelper.setText(addEmployee.txtFirstName, "Siddharth123");
+			UtilityHelper.setText(addEmployee.txtLastName, "Jadhav");
+			UtilityHelper.setText(addEmployee.btnSave, "Click on Save button.");
+			
+//			addEmployee.txtFirstName.sendKeys("Siddharth");
+//			addEmployee.txtLastName.sendKeys("Jadhav");
+//			addEmployee.btnSave.click();
+		
 			
 		}
 		
 		catch(Exception e) {
-			
+			GenerateReport().log(Status.FAIL, "Exception in Test Execution.");
 		}
 		
 		finally {
 			OHRM_LoginPage.OHRM_Logout();
+			System.out.println("Logged out successfully.");
 		}
 		
 		
