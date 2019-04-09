@@ -30,7 +30,7 @@ public class TestBase extends Reader {
 	public static String strScreenshotpath;
 
 	static ExtentTest logger = null;
-	ExtentReports extent = getExtent();
+	static ExtentReports extent = getExtent();
 
 	@BeforeMethod
 	 @Parameters({"Browser"})
@@ -85,7 +85,7 @@ public class TestBase extends Reader {
 		return logger;
 	}
 
-	public ExtentReports getExtent() {
+	public static ExtentReports getExtent() {
 		ExtentHtmlReporter reporter = new ExtentHtmlReporter(System.getProperty("user.dir") + "\\test-output\\ExecutionReport.html");
 		ExtentReports extent = new ExtentReports();
 		extent.attachReporter(reporter);
